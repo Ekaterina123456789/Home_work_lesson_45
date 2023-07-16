@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }}
+{% endblock %}
+
+
+{% block content %}
+{{ super() }}
+
+<ul class="catalog_menu">
+    {% for c in catalog_menu %}
+    <li>
+        <a href="{{ c.c_url }}">{{ c.c_name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<p><textarea name="message" cols="50" rows="10"></textarea></p>
+<p><textarea name="message" cols="50" rows="10"></textarea></p>
+<p><textarea name="message" cols="50" rows="10"></textarea></p>
+
+{% endblock %}
